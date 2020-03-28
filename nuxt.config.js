@@ -7,26 +7,32 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    script: [
+      { src: 'https://unpkg.com/@popperjs/core@2' }
+    ],
+    title: 'Authorization from Above',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=News+Cycle|Material+Icons' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' }
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#607d8b' },
 
   /*
   ** Global CSS
   */
   css: [
+    'assets/style/authorized.css'
   ],
 
   /*
@@ -38,11 +44,10 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [,
-    // Doc: https://bootstrap-vue.js.org/docs/
+  modules: [
     'bootstrap-vue/nuxt'
   ],
-
+  
   /*
   ** Build configuration
   */
